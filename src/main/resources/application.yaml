@@ -18,3 +18,13 @@ spring:
 logging:
   level:
     org.springframework.cache: trace
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: jdbc:mariadb://{RDS_ENDPOINT}:3306/redis
+    username: root
+    password: 1234
