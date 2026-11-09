@@ -25,6 +25,10 @@ spring:
     activate:
       on-profile: prod
   datasource:
-    url: jdbc:mariadb://{RDS_ENDPOINT}:3306/redis
+    url: jdbc:mariadb://${RDS_ENDPOINT}:3306/redis
     username: root
     password: 1234
+  data:
+    redis:
+      host: ${ElastiCache_ENDPOINT}
+      port: 6379
